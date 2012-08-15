@@ -1,9 +1,9 @@
 %csvread liest Tabelle
-M1 = csvread('4_Intensitat_1,5V_30mA_4s_161umDistance_140pxl_z15s8_untenKlein.csv');
+M1 = csvread('2_Intensitat_1,2V_25mA_4s_122umDistance_150pxl_z6s3_untenKlein_b.txt');
 M1(:,1) = [];
 
 M1(:,2) = (M1(:,2));
-M1(:,1) = M1(:,1)* (161*1E-6 / 140);
+M1(:,1) = M1(:,1)* (122*1E-6 / 150);
 
 
 %semilogy in hold on hold off Umgebung -> keine Wirkung!!
