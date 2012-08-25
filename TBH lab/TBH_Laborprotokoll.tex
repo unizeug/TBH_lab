@@ -78,15 +78,15 @@ Halbleitertechnik}
     Eine Emissionsmessung ist in der Halbleitertechnologie insofern interessant,
     weil sie Erkenntnisse über charakteristische Eigenschaften des Halbleiters,
     in unserem Fall die selbst hergestellte Diode, liefert. Dazu gehören die
-    Ladungsträgerlebensdauer $\tau_{n/p}$ und die Diffusionslänge $L_{n/p}$. Auf
+    Ladungsträgerlebensdauer $\tau_{n,p}$ und die Diffusionslänge $L_{n,p}$. Auf
     die Lebensdauer lässt sich mithilfe der Diffusionslänge und des
     Diffusionskoeffizienten schließen. Dieser ist ein materialabhängiger Wert,
     welcher von uns nicht weiter beachtet wird. Der folgende Zusammenhang hilft
-    bei der Berechnung von $\tau_{n/p}$:
+    bei der Berechnung von $\tau_{n,p}$:
     
     \begin{equation*}
         \begin{split}
-            L_{n/p} = \sqrt{\tau_{n/p} \cdot D_{n/p}} 
+            L_{n,p} = \sqrt{\tau_{n,p} \cdot D_{n,p}} 
         \end{split}
     \end{equation*}
     
@@ -97,11 +97,11 @@ Halbleitertechnik}
     
     \begin{equation*}
         \begin{split}
-            I(x) \sim \Delta n \sim exp(-\frac{x}{L_n}) 
+            I(x) \sim \ \Delta n \sim \ exp(-\frac{x}{L_n}) 
         \end{split}
     \end{equation*}
     
-    Hierbei werden Strahlungsintensität ins Verhältnis mit der
+    Hierbei werden Strahlungsintensität ins Verhältnis mit der\\
     Minoritätsüberschussladungträgerkonzentration, hier frei bewegliche
     Elektronen im p-Gebiet, und dieser wiederum ins Verhältnis mit einem
     Exponentialtherm gesetzt. Daher kann man die Intensitätsmessung direkt mit
@@ -126,14 +126,37 @@ Halbleitertechnik}
             \subsubsection{direkter Halbleiter}
             \begin{quote}
             Die Rekombination bei einem direkten Halbleiter ist relativ simpel.
-             
+            Ein freies Elektron braucht dabei nur, unter Abgabe der jeweiligen
+            Energie, den Bandabstand zwischen Leitungs- und Valenzband zu
+            überqueren.
+            
+            \begin{figure}[H]
+                    \centering
+                        \includegraphics[scale=0.7, trim = 1cm 1cm 1.5cm 0cm,
+                        clip]{./Emissionsbilder/restliches/direkt.png}
+                        \caption{Rekombination bei einem direkten Halbleiter}
+                            \label{fig:./Emissionsbilder/restliches/direkt.png}
+            \end{figure}
+            
             
             \end{quote}       
         
             \subsubsection{indirekter Halbleiter}
             \begin{quote}
+            Die Rekombination bei einem indirekten Halbleiter erfordert neben
+            einem Energieunterschied auch einen Impulsunterschied, damit das
+            Elektron auf dem Valenzband auftreffen kann. Dieser
+            Impulsunterschied ist in der folgenden Abbildung zu erkennen.
             
+            \begin{figure}[H]
+                    \centering
+                        \includegraphics[scale=0.7, trim = 1cm 1cm 1.5cm 0cm,
+                        clip]{./Emissionsbilder/restliches/indirekt.png}
+                        \caption{Rekombination bei einem indirekten Halbleiter}
+                            \label{fig:./Emissionsbilder/restliches/indirekt.png}
+            \end{figure}
             
+            \TODO{Bildquellen, TBH-Skript S.92 einfügen}
             \end{quote}       
         
         \end{quote}
