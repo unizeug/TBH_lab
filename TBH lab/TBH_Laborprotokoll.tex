@@ -132,7 +132,7 @@ Halbleitertechnik}
             
             \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.7, trim = 1cm 1cm 1.5cm 0cm,
+                        \includegraphics[scale=0.72, trim = 1cm 1cm 1.5cm 0cm,
                         clip]{./Emissionsbilder/restliches/direkt.png}
                         \caption{Rekombination bei einem direkten Halbleiter}
                             \label{fig:./Emissionsbilder/restliches/direkt.png}
@@ -150,7 +150,7 @@ Halbleitertechnik}
             
             \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.7, trim = 1cm 1cm 1.5cm 0cm,
+                        \includegraphics[scale=0.73, trim = 1cm 1cm 1.5cm 0cm,
                         clip]{./Emissionsbilder/restliches/indirekt.png}
                         \caption{Rekombination bei einem indirekten Halbleiter}
                             \label{fig:./Emissionsbilder/restliches/indirekt.png}
@@ -158,9 +158,107 @@ Halbleitertechnik}
             
             \TODO{Bildquellen, TBH-Skript S.92 einfügen}
             \end{quote}       
-        
+            
+            Ein weiterer Unterschied zwischen direkten und indirekten
+            Halbleitern ist der, dass direkte Halbleiter hauptsächlich
+            strahlend Rekombinieren, wohingegen indirekte Halbleiter
+            stochastisch betrachtet fast nur nichtstrahlend Rekombinieren.
+            Dennoch findet mit sehr geringer Wahrscheinlichkeit auch vereinzelt
+            strahlende Rekombination in den indirekten Halbleitern statt.\\
+            Bevor weiter darauf eingegangen wird, in wie fern dies für die
+            Emissionsmessung von Bedeutung ist, werden die Rekombinationsarten,
+            strahlend und nichtstrahlend, wiederholt.
+            
         \end{quote}
         
+        \subsection{Rekombinationsmechanismen}
+        \begin{quote}
+        
+        Eine Rekombination erfolgt stets unter Abgabe von einer
+        Energiedifferenz. Dabei wird unterschieden, ob diese Energie in Form
+        eines Lichtquants oder von Wärme abgegeben wird, wodurch auch die
+        Beschreibung strahlend oder nichtstrahlend entsteht.\\
+        Nun folgen je ein Beispiel für diese Machanismen.
+        
+            \subsubsection{strahlende Rekombination}
+            \begin{quote}
+            
+            Die strahlende Rekombination, hauptsächlich bei direkten Halbleitern
+            zu sehen, besagt, dass der rekombinierende Ladungsträger die
+            Energiedifferenz, welche er zurücklegt, in Form eines Photons
+            freigibt. Die Energie dieses Photons beträgt genau die Energie des
+            Bandabstands zwischen den beiden Bändern. Anders ausgedrückt kann
+            man sie auch Rekombinationsenergie nennen:
+                    
+            \begin{equation*}
+                \begin{split}
+                    W_{Rek} = h \cdot \nu 
+                \end{split}
+            \end{equation*}
+            
+            Diese Rekombinationsenergie setzt sich aus des Produkt aus dem
+            Planckschen Wirkungsquantums $h$ und die Frequenz des entstehenden
+            Lichts $\nu$.\\
+            
+            Ein Beispiel für die strahlende Rekombination ist die
+            Band-Band-Rekombination, welche in der folgenden Abbildung
+            dargestellt wurde:
+            
+            \begin{figure}[H]
+                    \centering
+                        \includegraphics[scale=0.72, trim = 1cm 1cm 1.5cm 0cm,
+                        clip]{./Emissionsbilder/restliches/bandband.png}
+                        \caption{strahlende Band-Band-Rekombination}
+                            \label{fig:./Emissionsbilder/restliches/direkt.png}
+            \end{figure}
+            
+            Man erkennt ein Elektron, welches beim Rekombinieren, die bereits
+            erwähnte Rekombinationsernergie in Form eines Photons abgibt. Es
+            kann aber auch vorkommen, dass die abgegebene Energie an ein
+            weiteres Eektron im Leitungsband abgegeben wird, wodurch dieser auf
+            ein höheres Energieniveau im Leitungsband angehoben und wieder runterfallen 
+            kann. Diese Möglichkeit ist bei der strahlenden Rekombination die
+            unwarscheinlichere Variante.
+            
+            \end{quote}
+            
+            \subsubsection{nichtstrahlende Rekombination}
+            \begin{quote}
+            
+            Die nichtstrahlende Rekombination findet hauptsächlich bei
+            indirekten Halbleitern statt. Dabei wird die Rekombinationsenergie
+            an ein weiteres Elektron im Leitungsband abgegeben, welches auf ein
+            höheres Energieniveau angehoben wird und unter Abgabe von
+            thermischer Energie wieder runterfallen kann.\\
+            Als ein Beispiel für die nichtstrahlende Rekombination wird die
+            Augerrekombination dargestellt:
+            
+            \begin{figure}[H]
+                    \centering
+                        \includegraphics[scale=0.72, trim = 1cm 1cm 1.5cm 0cm,
+                        clip]{./Emissionsbilder/restliches/auger.png}
+                        \caption{nichtstrahlende Auger-Rekombination}
+                            \label{fig:./Emissionsbilder/restliches/auger.png}
+            \end{figure}
+            
+            \end{quote}
+        
+        Die für die Emissiosmessung verwendete Diode besteht aus Silizium,
+        welcher ein indirekter Halbleiter ist und dessen Rekombinationen
+        hauptsächlch nichtstrahlend ist. Wie aber schon bei den Halbleitertypen
+        erwähnt, kann es bei indirekten Halbleitern auch mit sehr geringer
+        Wahrscheinlichkeit zu strahlender Rekombination kommen. Da die Abgabe
+        von thermischer Energie zu einem Temperaturunterschied in der Diode
+        führen würde, bräuchte man bei den Emissionsmessung sehr feine und genau
+        Thermometer, welche im $\mu m$-Bereich nicht realisierbar sind. Daher
+        wird die stochastisch in geringer Menge vorhandene strahlende
+        Rekombination betrachtet um über die mit lichtempfindlichen
+        Kameras gemessene Lichtintensitäten auf die gesuchte Diffusionslänge
+        schließen zu können.
+        \end{quote}
+    
+    
+    
     
 \end{quote} %sec Emissionsmessung
 
