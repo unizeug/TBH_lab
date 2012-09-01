@@ -4,6 +4,7 @@ M1(:,1) = [];
 
 M1(:,2) = (M1(:,2));
 M1(:,1) = M1(:,1)* (265*1E-6 / 115);
+% M1(:,1) = M1(:,1)./2;         %nur für erste Messreihe
 
 
 %semilogy in hold on hold off Umgebung -> keine Wirkung!!
