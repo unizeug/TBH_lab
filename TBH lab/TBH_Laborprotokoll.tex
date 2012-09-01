@@ -90,7 +90,7 @@ Halbleitertechnik}
         \end{split}
     \end{equation*}
     
-    Ziel unserer Messung aber, war die Bestimmung der Diffusionslänge in unserer
+    Ziel unserer Messung aber war die Bestimmung der Diffusionslänge in unserer
     Diode. Dieser wurde über die realisierte Intensitätsmessung anhand der
     Emissionen in der Diode ermittelt. Dabei wurden folgende
     Proportionalitätsverhätnisse verwendet:
@@ -102,12 +102,11 @@ Halbleitertechnik}
     \end{equation*}
     
     Hierbei werden Strahlungsintensität ins Verhältnis mit der\\
-    Minoritätsüberschussladungträgerkonzentration, hier frei bewegliche
-    Elektronen im p-Gebiet, und dieser wiederum ins Verhältnis mit einem
-    Exponentialtherm gesetzt. Daher kann man die Intensitätsmessung direkt mit
-    diesem Therm in Verbindung setzen, welcher in seinem Argument die gesuchte
-    Diffusionslänge beinhaltet. Weiteres zur Berechnung des $L_n$ steht in der
-    Auswertung der Messung.\\
+    Minoritätsüberschussladungträgerkonzentration und dieser wiederum 
+    ins Verhältnis mit einem Exponentialtherm gesetzt. Daher kann man die
+    Intensitätsmessung direkt mit diesem Therm in Verbindung setzen, 
+    welcher in seinem Argument die gesuchte Diffusionslänge beinhaltet. Weiteres
+    zur Berechnung des $L_n$ steht in der Auswertung der Messung.\\
     
     Um aber die Intensitätsmessung verstehen zu können müssen einige
     grundlegende Theorien der Halbleiter bezüglich ihrer Typen und ihrer
@@ -132,7 +131,7 @@ Halbleitertechnik}
             
             \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.72, trim = 1cm 1cm 1.5cm 0cm,
+                        \includegraphics[scale=0.72, trim = 1cm 0cm 1.5cm 0cm,
                         clip]{./Emissionsbilder/restliches/direkt.png}
                         \caption{Rekombination bei einem direkten Halbleiter}
                             \label{fig:./Emissionsbilder/restliches/direkt.png}
@@ -150,7 +149,7 @@ Halbleitertechnik}
             
             \begin{figure}[H]
                     \centering
-                        \includegraphics[scale=0.73, trim = 1cm 1cm 1.5cm 0cm,
+                        \includegraphics[scale=0.73, trim = 1cm 0cm 1.5cm 0cm,
                         clip]{./Emissionsbilder/restliches/indirekt.png}
                         \caption{Rekombination bei einem indirekten Halbleiter}
                             \label{fig:./Emissionsbilder/restliches/indirekt.png}
@@ -161,8 +160,8 @@ Halbleitertechnik}
             
             Ein weiterer Unterschied zwischen direkten und indirekten
             Halbleitern ist der, dass direkte Halbleiter hauptsächlich
-            strahlend Rekombinieren, wohingegen indirekte Halbleiter
-            stochastisch betrachtet fast nur nichtstrahlend Rekombinieren.
+            strahlend rekombinieren, wohingegen indirekte Halbleiter
+            stochastisch betrachtet fast nur nichtstrahlend rekombinieren.
             Dennoch findet mit sehr geringer Wahrscheinlichkeit auch vereinzelt
             strahlende Rekombination in den indirekten Halbleitern statt.\\
             Bevor weiter darauf eingegangen wird, in wie fern dies für die
@@ -241,11 +240,12 @@ Halbleitertechnik}
                             \label{fig:./Emissionsbilder/restliches/auger.png}
             \end{figure}
             
+            \TODO{Bildquellen einfügen: TBH-Skript S.93,94}
             \end{quote}
         
         Die für die Emissiosmessung verwendete Diode besteht aus Silizium,
         welcher ein indirekter Halbleiter ist und dessen Rekombinationen
-        hauptsächlch nichtstrahlend ist. Wie aber schon bei den Halbleitertypen
+        hauptsächlch nichtstrahlend sind. Wie aber schon bei den Halbleitertypen
         erwähnt, kann es bei indirekten Halbleitern auch mit sehr geringer
         Wahrscheinlichkeit zu strahlender Rekombination kommen. Da die Abgabe
         von thermischer Energie zu einem Temperaturunterschied in der Diode
@@ -255,9 +255,177 @@ Halbleitertechnik}
         Rekombination betrachtet um über die mit lichtempfindlichen
         Kameras gemessene Lichtintensitäten auf die gesuchte Diffusionslänge
         schließen zu können.
+        
         \end{quote}
+        
+        \vspace{1.5em}
+        
+        Emission entsteht bei der Rekombination eines freien Ladungsträgers,
+        welches nur in Durchlassrichtung bei einer Diode erwartet wird. Dabei
+        werden die Majoritäten ins entgegen gesetztes Gebiet injeziert und
+        rekombinieren dort als Minoritäten mit den oppositär gepolten
+        Ladungsträgern. Die dabei freigesetzte Energie kann dann als Emission
+        wargenommen werden. Emission kann aber auch in Sperrrichtung entstehen.
+        Die sogennante Feldemission findet dabei ausschließlich in der
+        ausgebreiteten Raumladungszone statt. Sobald eine Sperrspannung an der
+        Diode angelegt wird, werden die freien Ladungsträger aus der
+        Raumladungszone gesaugt und erfahren dabei eine kinetische Energie,
+        dessen Stärke von der Größe der Sperrspannung abhängt. Während der
+        beschleunigten Bewegung der Ladungsträger aus der Raumladungszone,
+        können diese mit Gitteratomen zusammenprallen und Elektronen aus diesem
+        Atom auf ein höheres Energieniveau anheben. Wie bei der nichtstrahlenden
+        Rekombination entsteht bei diesem Vorfall hauptsächlich thermische
+        Energie,es kann aber auch, mit einer sehr kleinen wahrscheinlichkeit
+        eine strahlende Rekombination vorkommen.\\
+        Die Feldemission ist im Vergleich zu der Emission in Flussrichtung
+        unbedeutend klein. Daher ist für die Intensitätsmessung nur eine
+        Emission in Flussrichtung relevant.
+        
+        \vspace{1.5em}
+        
+        \subsection{Messaufbau}
+        \begin{quote}
+        
+        Die Emissionsmessung erfolgt, wie in der Einleitung erwähnt, durch eine
+        Intensitätsmessung während der Rekombinationen in Flussrichtung der
+        Diode. Die Messung wird mithilfe des Phemos 1000 durchgeführt, welches
+        ein Prüfgerät in der Halbleitertechnik ist und hauptsächlich für
+        Fehlerdetektion dient. Um diese geringe Lichtintensität
+        messen zu können, braucht man eine lichtempfindliche CCD Kamera. Diese
+        ist im Phemos integriert und muss während der gesamten Messung auf
+        $-50$°C gekühlt werden. So werden thermische Rauscheinflüsse der sehr 
+        empfindlichen Kamera vermieden um das Ergebnis nicht zu verfälschen.\\
+        
+        Der Wafer, mit mehreren Diodenstrukturen, wird in dem Innenraum des
+        Phemos auf einer Vakuumplatte fixiert, sodass der erwünschte Bereich des
+        Wafers mit dem passenden Objektiv vergrössert werden kann. Diese
+        Vergrößerung hilft bei der Kontaktierung des p- und des n-Pads der Diode
+        anhand Nadelspitzen, welche in der unteren Abbildung im Licht des
+        Mikroskops zu erkennen sind.
+        
+        \begin{center}
+                \begin{tabular}{ll}
     
+                \hspace{-8em}
+                    \begin{minipage}{0.6\textwidth}
     
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.7, trim = 0cm 0cm 0cm
+                            0cm, clip]{./Emissionsbilder/restliches/phemos1.JPG}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Innenraum des Phemos}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.7, trim = 0cm 0cm 0cm
+                            0cm, clip]{./Emissionsbilder/restliches/phemos2.JPG}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{kontaktierte Diode auf dem Wafer}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+        
+        \vspace{2em}
+        
+        Anhand eines Live-Bilds der CCD Kamera, kann man bis zum Start der
+        Messung den fokussierten Bereich bepannungsquelle für den
+        Durchlassbetrieb der Diode wurde der HP4145A, ein sensibeles
+        Analysegerät für Halbleiterbauelemente, verwendet, mit welchem eine
+        konstante Spannung für eine einstellbare Zeitspanne eingestellt werden
+        kann. Somit konnte man fest davon ausgehen, dass die Diode ohne einen
+        Spannungseinbruch konstant in Durchlassrichtung betrieben wurde.\\
+        Die Messdauer der Emission wurde mithilfe der Phemos-Software
+        eingestellt. Mit welchen Durchlassspannungen und wie lange gemessen
+        wurde, wird in der Auswertung der Messergebnisse angegeben.\\
+        Am Ende jeder Messung wurde noch eine Dark-Substraction durchgeführt.
+        Bei dieser Dark-Substraction wird die Durchlassspannung abgeschaltet,
+        wodurch die Diode nicht mehr als aktiv betrachtet wird. Die Emissionsmessung wird mit der
+        gleichen Messdauer und deaktivierter Diode nochmal durchgeführt und von
+        der eigentlichen Emissionsmessung subtrahiert, damit jegliche
+        Rauscheinflüsse des Phemos selbst aus den Messergebnissen ausgeschlossen
+        werden können. 
+        
+        \end{quote}
+        
+        \subsection{Messergebnisse}
+        \begin{quote}
+        
+        Die Active-Area- und Kontaktfenstermasken wurden so erstellt, dass der
+        Wafer am Ende der Produktion Dioden auf jedem Die besaß, die für diese
+        Emissionsmessung hergestellt wurden. Diese hatten die Besonderheit, dass
+        zwischen p- und n-Pad das Substrat nicht mit Siliziumoxid beschichtet
+        war, damit an den pn-Übergang zwischen n-Gebiet und p-Substrat
+        unverfälschte Emission gemessen werden konnte. Man hätte annehmen
+        können, dass dort, wo Oxid auf dem pn-Übergang lag, keine Emission aus
+        dem Wafer austreten und gemessen werden kann. Die Praxis bewies aber das
+        Gegenteil. Unabhängig von der Auswertung der Messung
+        konnte an den pn-Übergängen mit Siliziumoxid darüber eine viel stärkere
+        Emission gemessen werden. Der Grund dafür lag in dem Brechungsindex und
+        der Dicke der Oxidschicht, denn durch die Reflexionen der Strahlung an
+        den Übergängen von Silizium zu Siliziumoxid und Siliziumoxid zur Luft
+        wurden die Strahlen so reflektiert, dass konstruktive Interferenz
+        zwischen den Lichtwellen entstand und somit die Emission als viel
+        stärker wahrgenommen wurde. Da dies nicht die wirkliche Intensität der
+        Emission am pn-Übergang unserer Diode wiederspiegelt, wurden diese mit
+        Oxid überlagerten Stellen in der Emissionsmessung vernachlässigt.\\
+        
+        Gemessen wurde nur der Bereich von der Grenze des n-Gebiets bis in
+        das p-Substrat hinein. Als Hilfe dafür wurde das jeweilige Emissionsbild
+        der Phemos-Software verwendet. Diese zeigte mit farblichen Unterschieden
+        (rot = starke Emission, blau = schwache Emission) wo der sinnvolle
+        Messbereich begann und endete. Die folgenden Abbildungen zeigen die
+        Diode vor und nach der Emissionsmessung auf dem Die in Zeile $6$ und
+        Spalte $3$ des Wafers. Zunächst wurde eine große, dann eine kleinere
+        Emissions-Diode ausgemessen. Bei beiden betrug die Durchlassspannung
+        $1,2 V$ bei $25 mA$ und einer Messdauer von $4s$.
+        
+         \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-10em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm,
+                            clip]{./Emissionsbilder/eins/nach_Kontaktierung_vorMessung.bmp}
+                            %FIXME [width=640px, height=474px]
+                            \caption{kontaktierte Diode, Live-Bild der CCD
+                            Kamera}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.4, trim = 2cm 6.5cm 1.5cm
+                            8.5cm,
+                            clip]{./Emissionsbilder/eins/nach_Emission_mit_Distanzen.bmp}
+                            %FIXME [width=640px, height=474px]
+                            \caption{selbe Diode nach der Emissionsmessung}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+        
+        \end{quote}
     
     
 \end{quote} %sec Emissionsmessung
