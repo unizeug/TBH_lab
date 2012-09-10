@@ -1,10 +1,8 @@
 \newcommand{\institut}{}
 \newcommand{\fachgebiet}{Halbleiterbauelemente}
 \newcommand{\veranstaltung}{Praktikum Technologie und Bauelemente der Halbleitertechnik}
-\newcommand{\pdfautor}{Dirk Barbendererde (321 836), Thomas Kapa (), Alona
-Siebert (), Özgü Dogan (326048)}
-\newcommand{\autor}{Dirk Barbendererde (321 836)\\ Thomas Kapa ()\\ Alona
-Siebert ()\\ Özgü Dogan (326 048)}
+\newcommand{\pdfautor}{Dirk Barbendererde (321 836), Thomas Kapa (), Alona Siebert (), Özgü Dogan (326 048)}
+\newcommand{\autor}{Dirk Barbendererde (321 836)\\ Thomas Kapa ()\\ Alona Siebert ()\\ \"Ozg\"u Dogan (326 048)}
 \newcommand{\pdftitle}{Praktikum\ Technologie und Bauelemente der
 Halbleitertechnik}
 \newcommand{\prototitle}{Praktikum Technologie und Bauelemente der Halbleitertechnik}
@@ -32,6 +30,50 @@ Halbleitertechnik}
 
 \section{Kennlinie}
 \begin{quote}
+    \subsection{Messaufbau}
+    \begin{quote}
+        Die erste Untersuchung die wir unseren Dioden unterzogen haben war die Aufnahme der Kennlinien. Dazu muss der
+        pn-Übergang unter einem Lichtmikroskop kontaktiert werden. Die beiden Gebiete werden jeweils mit einem Kanal des
+        Parameter-Analyzer 4145A von HP verbunden, der einen sweep der Spannung von \SI{-1}{\volt} bis \SI{1}{\volt} macht
+        und dabei den Strom misst.\\
+        Diese Messung haben wir für verschiedene Dioden auf verschiedenen Dies gurchgeführt um diese miteinander vergleichen
+        zu können.
+    \end{quote} % Sub: Messaufbau
+    
+    
+    \subsection{Auswahl der zu messenden Diode}
+    \begin{quote}
+        Um möglichst aussagekräftige Messwerte zu bekommen haben wir uns dazu entschieden jeweils die größte Diode auf
+        den Dies für unsere Messungen zu benutzen. Davon haben wir uns versprochen, dass sowohl Durchlass- als
+        auch Sperrstrom am größten sind und somit besser zu messen sein würden als bei kleineren Dioden.
+        Nach der Auswertung anderer Messungen und \TODO{einigen weiteren Überlegungen} stellte sich aber heraus, dass
+        dies ein Trugschluss war. Eine Größere quadratische Diode führt zwar sehr wohl einen höheren Strom als eine
+        kleinere Quadratische, bei Durchlass- und Sperrstrom kommt es aber nicht auf die Größe sondern auf die
+        pn-Übergangs-Fläche an. Daher kann eine der Fläche nach nur halb so große Diode, mit verzahnter Fingerstruktur,
+        noch mehr Strom führen als die flächenmäßig größte Diode für die wir uns entschieden haben. Deshalb wird am Ende
+        der Auswertung zusätzlich noch eine solche fingerstruktur betrachtet.
+        
+     \end{quote} % Subsub: Auswahl der zu messneden Diode
+    
+    
+    \subsection{Erwartete Kennlinie}
+    \begin{quote}
+        
+        Bei intakten Dioden erwarten wir eine Kennlinie nach der Formel von Shockley:
+        
+        \begin{equation}
+        \begin{split}
+            J_{ges} = J_0 \cdot (e^ \frac{u}{U_t} -1)
+        \end{split}
+        \end{equation}
+        
+        beziehungsweise
+    \end{quote} % Sub: Erwartete Kennlinie
+    
+    
+    
+    
+    
     
     Benennung der Dateien:\\
     Kennlinie_{Wavernummer}_Die_[{Zeile},{Spalte}]_Mess_{messung}.mat\\
@@ -59,9 +101,6 @@ Halbleitertechnik}
     
     
     
-    Vortrag
-    
-    Kennlinie
     
     was wir messen (querschnitt)
     was für ne Kennlinie wir erwarten
