@@ -18,6 +18,7 @@ I = b(:,2);
 
 % replace 0 (in electric current values [A]) with the smallest possible
 % value
+disp(I(I==0))
 I(I==0) = realmin;
 
 % log(|I|)
