@@ -10,10 +10,11 @@ Halbleitertechnik}
 
 \newcommand{\gruppe}{Gruppe 1}
 \newcommand{\betreuer}{Betreuer:\\ Clemens Helfmeier\\ Philipp Scholz}
-
-
+ 
 
 \input{../../packages/tu_header_9}
+
+
 
 \setcaptionwidth{7.5cm}
 
@@ -36,7 +37,7 @@ Halbleitertechnik}
         pn-Übergang unter einem Lichtmikroskop kontaktiert werden. Die beiden Gebiete werden jeweils mit einem Kanal des
         Parameter-Analyzer 4145A von HP verbunden, der einen sweep der Spannung von \SI{-1}{\volt} bis \SI{1}{\volt} macht
         und dabei den Strom misst.\\
-        Diese Messung haben wir für verschiedene Dioden auf verschiedenen Dies gurchgeführt um diese miteinander vergleichen
+        Diese Messung haben wir auf verschiedenen Dies gurchgeführt um diese miteinander vergleichen
         zu können.
     \end{quote} % Sub: Messaufbau
     
@@ -53,26 +54,81 @@ Halbleitertechnik}
         noch mehr Strom führen als die flächenmäßig größte Diode für die wir uns entschieden haben. Deshalb wird am Ende
         der Auswertung zusätzlich noch eine solche fingerstruktur betrachtet.
         
-     \end{quote} % Subsub: Auswahl der zu messneden Diode
+    \end{quote} % Subsub: Auswahl der zu messneden Diode
     
     
     \subsection{Erwartete Kennlinie}
     \begin{quote}
         
-        Bei intakten Dioden erwarten wir eine Kennlinie nach der Formel von Shockley:
+        Bei intakten Dioden erwarten wir im Grunde eine Kennlinie nach der Formel von Shockley:
+        
+        
         
         \begin{equation}
         \begin{split}
             J_{ges} = J_0 \cdot (e^ \frac{u}{U_t} -1)
         \end{split}
+        \label{equ:Schockley}
         \end{equation}
         
-        beziehungsweise
+        
+        jedoch inklusive realitätsbedingte Abweichungen.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{KennlinienBilder/reale_Kennlinie}
+            \caption{Reale kennlinie einer Diode}
+            \label{fig:reale_Kennlinie}
+        \end{figure}
+        
+        
+        Wie in Abb. \ref{fig:reale_Kennlinie} logatythmisch dargestellt erwarten wir, dass nur der mittlere Teil
+        zwischen \SI{0,2}{\volt} und \SI{0,5}{\volt} der Schockley-Gleichung folgt. Bei höheren Spannungen ist der
+        Wiederstand der Bahngebiete nicht mehr vernachlässigbar klein und wird sich deutlich mtrommindernd auf die
+        Kennlinie auswirken. Außerdem wird sich durch die nichteinhaltung der Shockleybedingungen die Rekombination in
+        der Raumladungszone bemerkbar machen. Bei kleinen Spannungen (unter ca.
+        \SI{0,2}{\volt}) fließt deutlich mehr Strom aufgrund von Rekombination als durch den Potentialunterschied,
+        wodurch der mehr Strom fließt als nach Gl. \ref{equ:Schockley}.\\
+        
+        Die in Abb. \ref{fig:reale_Kennlinie} dargestellte mangelhafte Messgenauigkeit haben wir nicht erwartet. Wir
+        sind davon ausgegangen, dass selbst bei sehr guten Dioden, also in diesem Fall welchen mit sehr kleinen
+        Sperrströmen, der Parameter-Analyzer keine Probleme hat diese zu messen.\\
+        \\
+        Außerdem werden wir den Strom betragsmäßig über der Spannung auftragen, was es ermöglicht zur illustration auch
+        negative Ströme logarythmisch dar zu stellen. In unserer Auswertung sind Ströme bei negatien Spannungen also als
+        negative Ströme auf zu fassen.
+        
+        
+        
     \end{quote} % Sub: Erwartete Kennlinie
     
     
+    \subsection{Messergebnisse}
+    \begin{quote}
+        
+        
+        
+        
+    \end{quote} % Sub: Messergebnisse
     
     
+    
+    
+    \subsection{Auswertung}
+    \begin{quote}
+        
+    \end{quote} % Sub: Auswertung
+    
+    
+    
+    
+    Quellen:
+    kennlinie: Laborskript Technologie und Bauelemente der Halbleitertechnik (Aydin Asri, Arminius Kuckelt, Michael
+    Sadowski, Julian Utehs und Tristan Visentin) S.66
+    
+    
+    
+    erst 
     
     
     Benennung der Dateien:\\
