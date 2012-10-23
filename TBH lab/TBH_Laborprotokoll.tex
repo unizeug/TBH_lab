@@ -2384,7 +2384,7 @@ Praktische Arbeit hat unser theoretisches Wissen sehr bereichert.
                             \label{fig:asdfasdfasdfggg}
                             \includegraphics[scale=0.25, trim = 0cm 0cm 0cm
                             0cm,
-                            clip]{./Emissionsbilder/zwei/nach_Emissionsmessung_Intensitat_Distanz.jpg}
+                            clip]{./Emissionsbilder/zwei/nach_Emissionsmessung_Intensitat_Distanz.png}
                             %FIXME [width=640px, height=474px]
                             \caption{selbe Diode nach der Emissionsmessung}
                         \end{figure}
@@ -2456,7 +2456,7 @@ Praktische Arbeit hat unser theoretisches Wissen sehr bereichert.
                             \label{fig:wwwerwerew}
                             \includegraphics[scale=0.25, trim = 0cm 0cm 0cm
                             0cm,
-                            clip]{./Emissionsbilder/vier/nach_Kontaktierung.jpg}
+                            clip]{./Emissionsbilder/vier/nach_Kontaktierung.png}
                             %FIXME [width=640px, height=474px]
                             \caption{kontaktierte Diode, Live-Bild der CCD
                             Kamera}
@@ -2513,7 +2513,7 @@ Praktische Arbeit hat unser theoretisches Wissen sehr bereichert.
                             \label{fig:nbmkhjuk}
                             \includegraphics[scale=0.25, trim = 0cm 0cm 0cm
                             0cm,
-                            clip]{./Emissionsbilder/fuenf/nach_Kontaktierung.jpg}
+                            clip]{./Emissionsbilder/fuenf/nach_Kontaktierung.png}
                             %FIXME [width=640px, height=474px]
                             \caption{kontaktierte Diode, Live-Bild der CCD
                             Kamera}
@@ -2660,8 +2660,72 @@ Praktische Arbeit hat unser theoretisches Wissen sehr bereichert.
 \begin{quote}
 
     Abschließend lässt sich zur Herstellung und Messung einer Diode sagen, dass
-    viele Fehlerquellen 
+    stets viele Fehlerquellen vorhanden sind. Unabhängig davon, welche
+    Prozessschritte in der Wafer-Herstellung unerwartet liefen, stellten wir
+    fest, dass die meisten prozessierten Dioden funktionstüchtig waren, was man
+    an den Diodenkennlinien erkennen kann.\\
+    
+    Die zwei wichtigsten Parameter, die Diffusionslänge $L_n$ und die
+    Minoritätsträgerlebensdauer $\tau_n$ ergaben bei den Messungen die
+    in der folgenden Tab.11 zusammengefassten Werte. Dabei wurde die
+    Minoritätsträgerlebensdauer aus der Diffusionslänge mit folgender Formel berechnet:
+    
+    \begin{equation*}
+        \begin{split}
+            L_{n} = \sqrt{\tau_{n} \cdot D_{n}}
+        \end{split}
+    \end{equation*}
+    
+    Der Diffusionskoeffizient $D_n$ lässt sich dabei über die
+    Ladungsträgerkonzentration des Substrataterials bestimmen. Bei dem von uns
+    verwendeten p-dotierten Siliziumbulk beträgt \ldots xxx. Dies wiederum
+    ergibt ein $D_n$ von $xxx$. Mit der Umformung
+    
+    \begin{equation*}
+        \begin{split}
+            \tau_n = \frac{(L_n)^2}{D_n}
+        \end{split}
+    \end{equation*}
+    
+    entstehen diese Minoritätsträgerlebendauer:
+    
+    \vspace{1.5em}
+    
+    \begin{table}[H]
+              \begin{addmargin}[-0.5cm]{3cm}
+                \centering
+                   \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+                    \hline
+                    Dissusionslängen in $\mu m$ &  $\tau_n$ berechnet aus $L_n$
+                    in $\mu s$ & $\tau_n$ aus Schaltverhalten-Messung in $\mu s$\\
+                    \hline
+                    304,2  & xxx &  1,6 ($22 \Omega$ Bahnwiderstand)\\
+                    \hline
+                    304,6  & xxx &  27 (Kommutierung, 2:1)\\
+                    \hline
+                    304,3  & xxx &  49 (Kommutierung, 1:2)\\
+                    \hline
+                    304,6  & xxx &  136 (Kommutierung, 1:6)\\
+                    \hline
 
+                    \end{tabular}
+              \end{addmargin}
+              \caption{Zusammenfassung der ermittelten Parameter}
+              \label{tab:grossetab2}
+            \end{table}
+            
+    Obwohl bei der Diffusionslängenbestimmung bei der Emmissionsmessung und der
+    Minoritätsträgerlebensdauerbestimmung bei der Schaltverhaltenmessung
+    unterschiedliche Dioden untersucht wurden und nur einige der $\tau_n$-Werte
+    beispielhaft in der Tabelle vorgeführt wurden, sollten die ermittelten
+    Lebensdauer dennoch vergleichbar sein, da jede Diode auf dem Wafer den
+    selben Prozessionsschritten unterlaufen ist. Es ist aber trotzdem eine
+    gewisse Abweichung zwischen den $\tau_n$-Werten zu erkennen. 
+    Diese Abweichung führen wir auf einen unklaren Fehler bei der Schaltverhaltenmessung zurück, da
+    bei dieser Messung, bei einem Erwartungwert von $50 \mu s$, nur die
+    Minderheit der Ergebnisse die Erwartungen an die Messung erfüllt haben.
+                
+            
 \end{quote}
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
