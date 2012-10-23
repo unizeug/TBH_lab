@@ -1,9 +1,9 @@
 %csvread liest Tabelle
-M1 = csvread('1_Intensitat_1_2V_4s_25mA_265umDistance_115pxl_z6s3_obenGross.csv');
+M1 = csvread('4_Intensitat_1,5V_30mA_4s_161umDistance_140pxl_z15s8_untenKlein.csv');
 M1(:,1) = [];
 
 M1(:,2) = (M1(:,2));
-M1(:,1) = M1(:,1)* (265*1E-6 / 115);
+M1(:,1) = M1(:,1)* (161*1E-6 / 140);
 % M1(:,1) = M1(:,1)./2;         %nur für erste Messreihe
 
 
@@ -25,7 +25,7 @@ figure(1);
 % xlim([0 6*10^-4])
 % AXIS('tight');
 
-xlabel('Emissionsweite [um]');
+xlabel('Emissionsweite [m]');
 set(get(AX(1),'Ylabel'),'String','exponentieller Verlauf');
 set(get(AX(2),'Ylabel'),'String','logarithmischer Verlauf');
 title('\bf Intensitätsmessung der Emission');
