@@ -1,4 +1,4 @@
-% Change default axes fonts.
+2% Change default axes fonts.
 set(0,'DefaultAxesFontName', 'Times New Roman')
 set(0,'DefaultAxesFontSize', 12)
 
@@ -29,88 +29,163 @@ set(0,'DefaultTextFontSize', 10)
 [A3.U,A3.I] = readBLA('../Messwerte/Wafer120502_z12s6_Biggi_UI_Kennlinie_neu_gut.txt');
 [A4.U,A4.I] = readBLA('../Messwerte/Wafer120502_z1s6_Biggi_UI_Kennlinie.txt');
 [A5.U,A5.I] = readBLA('../Messwerte/Wafer120502_z5s6_Biggi_UI_Kennlinie.txt');
-[A6.U,A6.I] = readBLA('../Messwerte/Wafer120502_z12s6_Biggi_UI_Kennlinie_neu_gut.txt');
+%[A6.U,A6.I] = readBLA('../Messwerte/');
+
+[A6.U,A6.I] = readBLA('../Messwerte/Wafer120502_z7s7_Biggi_UI_Kennlinie_beleuchtet.txt');
 [A7.U,A7.I] = readBLA('../Messwerte/Wafer120502_z6s6_UI_Kennlinie_Finger_groß_unten_dunkel_neu_gut.txt');
-
-
-[A4.U,A4.I] = readBLA('../Messwerte/Wafer120502_z6s6_GK02_UI_-1_Kennlinie_neu_gut.txt');
-[A8.U,A8.I] = readBLA('../Messwerte/Wafer120502_z7s7_Biggi_UI_Kennlinie_beleuchtet.txt');
+% 
+% 
+% [A4.U,A4.I] = readBLA('../Messwerte/Wafer120502_z6s6_GK02_UI_-1_Kennlinie_neu_gut.txt');
+ [A8.U,A8.I] = readBLA('../Messwerte/Wafer120502_z7s7_Biggi_UI_Kennlinie_beleuchtet.txt');
 
 
 YLABEL = '| I |   [A]';
 XLABEL = 'U [V]';
+YLIM = [1E-12 1];
 
 A = A1;
 I = A.I;
 U = A.U;
 I = abs(I);
-Rmin = find(U > 0.3367, 1);
-Rmax = find(U > 0.4573, 1);
-p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
-R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+Rmin = find(U > 0.3067, 1);
+Rmax = find(U > 0.5073, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
 %R = p(1) .* U + p(2);
 %R = polyval(p, U);
 
 figure(601);
     clf(601)
-       semilogy(U,I,'k');
-
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
         
         hold on
-        semilogy(U(Rmin:Rmax),R,'r');
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
         hold off
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
         
     ylabel(YLABEL)
     xlabel(XLABEL)
-   % ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
 A = A2;
-
 I = A.I;
 U = A.U;
 I = abs(I);
+Rmin = find(U > 0.3067, 1);
+Rmax = find(U > 0.5073, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(602);
     clf(602)
-        semilogy(U,I,'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+        
+        hold on
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-    ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
 A = A3;
-
 I = A.I;
 U = A.U;
 I = abs(I);
+Rmin = find(U > 0.3067, 1);
+Rmax = find(U > 0.5073, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(603);
     clf(603)
-        semilogy(U,I,'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+        
+        hold on
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-    ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
 
     
 A = A4;
-
 I = A.I;
 U = A.U;
+
+I0 = find(I > 0, 1);
+
+
 I = abs(I);
+% Rmin = find(U > 0.3067, 1);
+% Rmax = find(U > 0.5073, 1);
+% 
+% P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+% R = exp(polyval(P, U));
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(604);
     clf(604)
-        semilogy(U,abs(I-I(U == min(abs(U)))),'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+    
+        semilogy(U,I,'k', 'LineWidth', 1);
+%         text(U(I0),I(I0), [' \leftarrowJ_0 = ',num2str(I(I0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+%         semilogy(U,I,'k', 'LineWidth', 1);
+        
+        hold on
+%         semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-%     ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
@@ -134,43 +209,104 @@ A = A6;
 I = A.I;
 U = A.U;
 I = abs(I);
+Rmin = find(U > 0.5, 1);
+Rmax = find(U > 0.599, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(606);
     clf(606)
-        semilogy(U,I,'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+        
+        hold on
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-    ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
 A = A7;
-
 I = A.I;
 U = A.U;
 I = abs(I);
+Rmin = find(U > 0.49, 1);
+Rmax = find(U > 0.57, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(607);
     clf(607)
-        semilogy(U,I,'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+        
+        hold on
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-    ylim([1E-11 1])
+    ylim(YLIM)
     grid();
 
 
 A = A8;
-
 I = A.I;
 U = A.U;
-% I = abs(I);
+I = abs(I);
+Rmin = find(U > 0.49, 1);
+Rmax = find(U > 0.57, 1);
+
+P = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)), 1);
+R = exp(polyval(P, U));
+U0 = find(U > 0, 1);
+          
+
+% p = polyfit(U(Rmin:Rmax),log(I(Rmin:Rmax)),1);
+% R = logspace(U(Rmin),U(Rmax),(Rmax - Rmin)+1)';
+%R = p(1) .* U + p(2);
+%R = polyval(p, U);
+
 figure(608);
     clf(608)
-        plot(U,I,'k');
-%     legend('\rho = -1','\rho = -1/3','\rho = 0')
+        semilogy(U,I,'k', 'LineWidth', 1);
+       
+        text(U(U0),R(U0), [' \leftarrowJ_0 = ',num2str(R(U0),'%3.5e\n')], 'HorizontalAlignment','left','Margin',2, 'FontSize', 13, 'EdgeColor','black', 'BackgroundColor',[.9 .9 .9]);
+        
+        hold on
+        semilogy(U(1:Rmax),R(1:Rmax),'-.r', 'LineWidth', 3);
+        hold off
+        
+        legend('Diodenkennlinie','Verlaengerung des schockley Bereichs',2)
+        
     ylabel(YLABEL)
     xlabel(XLABEL)
-%     ylim([1E-11 1])
+    ylim(YLIM)
     grid();
     
     
